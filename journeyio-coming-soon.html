@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1424">
+  <meta name="description" content="JourneyIO Tours & Travel is getting ready for your next journey. Contact us for cab bookings and travel enquiries.">
+  <title>JourneyIO | Coming Soon</title>
+  <style>
+    :root { color-scheme: dark; --gold:#e8b96a; --ink:#0b1424; --muted:#aab5c5; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; min-height:100vh; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      color:#fff; background:
+        radial-gradient(ellipse at 78% 18%, rgba(38,91,125,.34), transparent 38%),
+        radial-gradient(ellipse at 12% 88%, rgba(184,129,59,.15), transparent 36%),
+        linear-gradient(135deg,#08111f 0%,#12243a 55%,#091321 100%);
+      display:flex; align-items:center; justify-content:center; overflow:hidden; padding:28px;
+    }
+    body:before, body:after { content:""; position:fixed; border:1px solid rgba(232,185,106,.13); border-radius:50%; pointer-events:none; }
+    body:before { width:620px;height:620px;right:-250px;top:-260px; }
+    body:after { width:460px;height:460px;left:-250px;bottom:-240px; }
+    .shell { width:min(100%,1040px); position:relative; z-index:1; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:clamp(56px,10vh,100px); }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.13em; font-size:19px; }
+    .mark { width:38px;height:38px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:20px; }
+    .tag { color:var(--muted);font-size:11px;letter-spacing:.19em;text-transform:uppercase; }
+    .hero { max-width:760px; }
+    .eyebrow { color:var(--gold);font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;gap:12px; }
+    .eyebrow:before { content:"";width:34px;height:1px;background:var(--gold); }
+    h1 { font-size:clamp(54px,9vw,104px);line-height:.98;letter-spacing:-.065em;margin:24px 0 22px;font-weight:750; }
+    h1 span { color:var(--gold); }
+    .intro { color:#c0cad7;font-size:clamp(16px,2vw,19px);line-height:1.75;max-width:590px;margin:0 0 34px; }
+    .actions { display:flex;align-items:center;gap:14px;flex-wrap:wrap; }
+    .btn { display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:700;transition:transform .2s,background .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .primary { background:var(--gold);color:#172235; }
+    .secondary { border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.04); }
+    .bottom { margin-top:clamp(70px,12vh,120px);padding-top:22px;border-top:1px solid rgba(255,255,255,.13);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#8e9bad;font-size:12px;letter-spacing:.04em; }
+    .bottom a { color:#d6dfeb;text-decoration:none; }
+    .bottom a:hover { color:var(--gold); }
+    .route { position:absolute;right:0;top:50%;width:260px;height:260px;transform:translateY(-40%);opacity:.23;pointer-events:none; }
+    .route svg { width:100%;height:100%; }
+    @media(max-width:680px) {
+      body { padding:24px; }
+      header { margin-bottom:72px;align-items:flex-start; }
+      .tag { max-width:120px;text-align:right;line-height:1.5; }
+      .route { width:150px;height:150px;top:34%;right:-25px;opacity:.13; }
+      .bottom { margin-top:78px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand"><div class="mark">J</div><span>JOURNEYIO</span></div>
+      <div class="tag">Tours · Travel · Cabs</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">A new journey begins</div>
+      <h1>We’re getting<br><span>ready to roll.</span></h1>
+      <p class="intro">Something exciting is on the way. JourneyIO is preparing a smoother way to plan your trips, book your rides, and make every journey count.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/916280089199" target="_blank" rel="noopener"> <span>Chat on WhatsApp</span> <span aria-hidden="true">↗</span></a>
+        <a class="btn secondary" href="tel:+916280089199">Call 62800 89199</a>
+      </div>
+    </section>
+
+    <div class="route" aria-hidden="true">
+      <svg viewBox="0 0 260 260" fill="none">
+        <circle cx="130" cy="130" r="105" stroke="#e8b96a" stroke-dasharray="3 9"/>
+        <path d="M44 180 C70 65 150 220 215 75" stroke="#e8b96a" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 8"/>
+        <circle cx="44" cy="180" r="6" fill="#e8b96a"/><circle cx="215" cy="75" r="6" fill="#e8b96a"/>
+        <path d="M204 74l11 1-2 11" stroke="#e8b96a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <footer class="bottom">
+      <span>© <span id="year">2026</span> JourneyIO. All rights reserved.</span>
+      <span>For bookings & enquiries: <a href="tel:+916280089199">+91 62800 89199</a></span>
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
